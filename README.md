@@ -1,4 +1,4 @@
-# Custom user-space driver for the Xreal Air, Xreal Air 2, Xreal Air 2 Pro and Xreal Air 2 Ultra to use it on Linux
+# Custom user-space driver for the Xreal Air, Xreal Air 2, Xreal Air 2 Pro and Xreal Air 2 Ultra to use it on Mac
 
 ## Information before use
 
@@ -9,19 +9,13 @@ support. So use it at your own risk!
 
 ## Inspiration and motivation
 
-Because I've written a user-space driver before for a [graphics tablet](https://gitlab.com/TheJackiMonster/HuionGT191LinuxDriver), 
-I thought I might look into it. To my surprise video output, audio output (stereo) and audio input (microphone) already 
-worked using drivers from the [Linux kernel](https://linux-hardware.org/?id=usb:3318-0424). So the only piece missing 
-for full use was the IMU sensor data in theory.
+This code is mostly original to Tobias Frisch's original code and the credit largely goes to him. 
+I just fixed a minor Endian library difference that was making the code not compile on MacOS. 
 
-A big help for implementing this piece of software was the source code and feedback from a custom 
-driver for Windows [here](https://github.com/MSmithDev/AirAPI_Windows/). Without that I would have 
-needed to find out payloads my own. So big thanks to such projects being open-source!
+Has been tested personally with Xreal Air 2 Pro's and outputs sensical data that I've been able to push to Opentrack and get proper head tracking!
 
-Another huge help was the reverse engineering [here](https://github.com/edwatt/real_utilities/) to 
-send different payloads to the device and even read calibration data from the local storage. Without 
-that calibrating would be quite a hassle for end-users as well as efforts from developers tweaking 
-the values manually. So big thanks as well!
+Original GIT repo is here: https://gitlab.com/TheJackiMonster/nrealAirLinuxDriver
+
 
 ## Features
 
