@@ -47,7 +47,7 @@
 #else
 #define device_imu_error(msg) (0)
 #endif
-
+ #include "endian_compat.h"
 struct device_imu_calibration_t {
 	FusionMatrix gyroscopeMisalignment;
 	FusionVector gyroscopeSensitivity;
